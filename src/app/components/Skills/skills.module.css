@@ -1,0 +1,59 @@
+.skillsContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--second-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 0 50px var(--main-color);
+  }
+  
+ .h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .skill {
+    margin-bottom: 20px;
+  }
+  
+ .h3 {
+    margin-bottom: 5px;
+    font-size: 40px;
+  }
+  
+  .progressBar {
+    background-color: var(--text-color);
+    border-radius: 25px;
+    overflow: hidden;
+    height: 30px;
+  }
+  
+  .progress {
+    background-color: var(--main-color);
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(20, 20, 20);
+    border-radius: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .progress[style*="80%"] {
+    background-color: var(--main-color);
+  }
+  
+  .progress[style*="90%"] {
+    background-color: var(--main-color);
+  }
+  
+  .progress[style*="100%"] {
+    background-color: var(--main-color);
+  }
+  .heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--main-color);
+  }
+

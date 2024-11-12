@@ -1,0 +1,165 @@
+/* Base styles for the home section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers content horizontally */
+  text-align: center;
+  gap: 3rem;
+  min-height: 100vh; /* Ensures full viewport height */
+  padding: 2rem;
+  flex-wrap: wrap; /* Ensures wrapping of content on small screens */
+  flex-direction: row; /* Content on the left, image on the right */
+}
+
+/* Home content styling */
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  max-width: 400px; 
+  margin-top: 100px; 
+}
+
+.homeContent h3 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-size: 3.5rem;
+  font-weight: 500;
+  animation: slideIn 2s ease-out; /* Animation for text */
+}
+
+.homeContent h1 {
+  font-size: 7rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1;
+  color: var(--main-color);
+}
+
+.homeContent p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8;
+  max-width: 1000px;
+  margin: 30px;
+}
+
+/* Styling for the home image */
+.homeImage {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Centers the image */
+  width: 50%;
+}
+
+.homeImage img {
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  width: 12vw; /* Ensure image is responsive */
+}
+
+.homeImage img:hover {
+  box-shadow: 0 0 50px var(--main-color);
+}
+
+/* Social icon styling */
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 3rem 0;
+}
+
+.socialIcons a {
+  color: var(--main-color);
+  font-size: 2.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.socialIcons a:hover {
+  transform: scale(1.2);
+  color: var(--text-color);
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: black;
+  border: 2px solid transparent;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: var(--text-color); /* Optionally change hover color */
+  transform: scale(1.05);
+}
+
+/* Button group styling */
+.btnGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the buttons */
+  gap: 1.5rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column; /* Stacks content on top of each other */
+    gap: 2rem;
+  }
+
+  .homeImage {
+    display: flex;
+    justify-content: center; /* Centers image on smaller screens */
+  }
+
+  .homeContent {
+    text-align: center; /* Centers text on smaller screens */
+    align-items: center;
+  }
+
+  .homeContent h1 {
+    font-size: 4rem; /* Adjusts title size */
+  }
+
+  .homeContent h3 {
+    font-size: 2.5rem; /* Adjusts subtitle size */
+  }
+
+  .homeImage img {
+    width: 32vw; /* Responsive width for smaller screens */
+  }
+
+  .btn {
+    font-size: 1.4rem; /* Adjusts button size */
+    padding: 0.8rem 2rem; /* Makes button smaller */
+  }
+}
+
+/* Animation for "I am a Web Developer" */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
